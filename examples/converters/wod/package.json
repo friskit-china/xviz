@@ -1,0 +1,25 @@
+{
+    "name": "waymo-converter",
+    "version": "0.0.1",
+    "description": "Provides a minimal set of tools for working with the Waymo Open Dataset in Javascript",
+    "scripts": {
+        "start": "node ./src/index.js",
+        "start-debug": "node --inspect-brk ./src/index.js",
+        "test": "node ./src/index.js -d ../../../../wod_unpacker/output -o ../../../data/generated/waymo/segment-7670103006580549715_360_000_380_000_with_camera_labels",
+        "playground": "node ./src/playground.js"
+    },
+    "dependencies": {
+        "argparse": "^1.0.10",
+        "@tensorflow/tfjs": "4.2.0"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.0.0-beta",
+      "@babel/core": "^7.0.0-beta",
+      "@babel/plugin-proposal-class-properties": "^7.0.0-beta",
+      "@babel/preset-env": "^7.0.0-beta",
+      "@babel/preset-react": "^7.0.0-beta",
+      "@babel/register": "^7.0.0-beta",
+      "babel-polyfill": "^6.26.0",
+      "reify": "^0.16.4"
+    }
+}
