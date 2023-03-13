@@ -15,7 +15,7 @@
 const {ArgumentParser} = require('argparse');
 
 const parser = new ArgumentParser({
-    add_help: true,
+    addHelp: true,
     description: 'WOD to XVIZ Converter.'
 });
 
@@ -69,20 +69,20 @@ parser.addArgument(['--image-max-width'], {
 
   module.exports = function getArgs(){
     const args = parser.parseArgs();
-    const input_dir = args.data_directory;
-    const output_dir = args.output;
+    const inputDir = args.data_directory;
+    const outputDir = args.output;
 
-    console.log(input_dir, output_dir);
-    const disabled_streams = args.disable_streams.split(',').filter(Boolean);
+    console.log(inputDir, outputDir);
+    const disabledStreams = args.disable_streams.split(',').filter(Boolean);
     return {
-        input_dir,
-        output_dir,
-        disabled_streams,
-        fake_streams: args.fake_streams,
-        image_max_width: Number(args.image_max_width),
-        image_max_height: Number(args.image_max_height),
-        message_limit: Number(args.message_limit),
-        write_json: Boolean(args.json),
-        write_protobuf: Boolean(args.protobuf)
+        inputDir,
+        outputDir,
+        disabledStreams,
+        fakeStreams: args.fake_streams,
+        imageMaxWidth: Number(args.image_max_width),
+        imageMaxHeight: Number(args.image_max_height),
+        messageLimit: Number(args.message_limit),
+        writeJson: Boolean(args.json),
+        writeProtobuf: Boolean(args.protobuf)
     };
   }

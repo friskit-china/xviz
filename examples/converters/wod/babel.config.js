@@ -11,12 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 module.exports = function babelConfig(api) {
-    api.cache(() => process.env.NODE_ENV === 'production'); // eslint-disable-line
-  
-    return {
-      presets: ['@babel/preset-env'],
-      plugins: [['@babel/plugin-proposal-class-properties', {loose: false}]]
-    };
+  api.cache(() => process.env.NODE_ENV === 'production'); // eslint-disable-line
+
+  return {
+    presets: ['@babel/preset-env'],
+    plugins: [['@babel/plugin-proposal-class-properties', {loose: false}]]
   };
+};
   

@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 require('@babel/register');
 require('babel-polyfill');
 
@@ -18,5 +19,5 @@ const parseArgs = require('./args');
 const transform = require('./transform');
 
 (async function main() {
-    await transform(parseArgs());
-  })();
+  await transform(parseArgs());
+})();

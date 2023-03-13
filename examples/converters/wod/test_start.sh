@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 yarn start \
 -f ../../../data/waymo/segment-7670103006580549715_360_000_380_000_with_camera_labels.tfrecord \
 -o ../../../data/generated/waymo/segment-7670103006580549715_360_000_380_000_with_camera_labels
